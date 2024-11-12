@@ -33,10 +33,10 @@ const Products = () => {
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-64 object-cover"
+              className="w-full h-64 p-4 rounded-2xl bg-white object-contain"
             />
             <div className="absolute inset-0 bg-opacity-40 flex items-end justify-center mb-4">
-              <h2 className="text-white p-2 bg-opacity-50 bg-black rounded-full text-xl font-semibold text-center">{product.name}</h2>
+              <h2 className="text-white py-2 px-6 bg-opacity-60 bg-black rounded-full text-xl font-semibold text-center">{product.name}</h2>
             </div>
             <a
               href={product.buyLink}
