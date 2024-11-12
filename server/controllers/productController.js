@@ -26,7 +26,7 @@ exports.createProduct = async (req, res) => {
 
     fs.unlink(req.file.path, function (err) {
       if (err) console.log(err);
-      console.log("File deleted successfully");
+      console.log("File deleted after uploading on cloudinary successfully");
     });
 
     res.status(201).json(newProduct);
