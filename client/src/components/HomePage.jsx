@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import Products from "./Products";
 import AddProduct from "./AddProduct";
+import DeleteProduct from "./DeleteProduct";
 
 function HomePage() {
   return (
@@ -40,8 +41,6 @@ function HomePage() {
 
         
         {/* Product Showcase */}
-        <AddProduct />
-
         <Suspense fallback={<div>Loading...</div>}>
           <Products />
         </Suspense>
