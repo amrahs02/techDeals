@@ -8,6 +8,11 @@ const AddProduct = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
+  // Dynamically set API URL based on the environment
+  const api_url = (window.location.hostname === 'localhost') 
+    ? 'http://localhost:5000' 
+    : 'https://techdeals.onrender.com';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -16,7 +21,8 @@ const AddProduct = () => {
     formData.append('buyLink', buyLink);
 
     try {
-      await axios.post('http://localhost:5000/api/v1/products', formData, {
+      // Fix: Template literals to concatenate the API URL correctly
+      await axios.post(`${api_url}/api/v1/products`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

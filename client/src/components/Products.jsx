@@ -4,10 +4,15 @@ import axios from 'axios';
 const Products = () => {
   const [products, setProducts] = useState([]);
 
+  // Dynamically set API URL based on the environment
+  const api_url = (window.location.hostname === 'localhost') 
+    ? 'http://localhost:5000' 
+    : 'https://techdeals.onrender.com';
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/v1/products');
+        const response = await axios.get(`${api_url}/api/v1/products`);
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -30,7 +35,7 @@ const Products = () => {
               alt={product.name}
               className="w-full h-64 object-cover"
             />
-            <div className="absolute inset-0  bg-opacity-40 flex items-end justify-center mb-4  ">
+            <div className="absolute inset-0 bg-opacity-40 flex items-end justify-center mb-4">
               <h2 className="text-white p-2 bg-opacity-50 bg-black rounded-full text-xl font-semibold text-center">{product.name}</h2>
             </div>
             <a
