@@ -7,7 +7,7 @@ const Products = () => {
   // Dynamically set API URL based on the environment
   const api_url = (window.location.hostname === 'localhost') 
     ? 'http://localhost:5000' 
-    : 'https://techdeals.onrender.com';
+    : 'https://techdealsapi.onrender.com';
 
   useEffect(() => {
     const fetchProducts = async () => {
