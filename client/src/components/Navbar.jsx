@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links */}
-      <div className="flex-grow md:flex md:items-center md:justify-center space-x-4 mt-4 md:mt-0">
+      {/* <div className="flex-grow md:flex md:items-center md:justify-center space-x-4 mt-4 md:mt-0">
         <Link
           to="/"
           className="text-white bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700 transition"
@@ -26,18 +26,18 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-        //   to="/add"
+          to="/add"
           className="text-white bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 transition"
         >
           Add Product
         </Link>
         <Link
-        //   to="/delete"
+          to="/delete"
           className="text-white bg-red-600 px-4 py-2 rounded-full hover:bg-red-700 transition"
         >
           Delete Product
         </Link>
-      </div>
+      </div> */}
     </nav>
   );
 };
